@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="page video-page" id="main">
+  <header class="site-header video-header">
+    <a class="site-name" href="{{ .Site.Home.RelPermalink }}">Yiwen Cao</a>
+    <a class="back-link" href="{{ .Site.Home.RelPermalink }}#videos">← All videos</a>
+  </header>
+  <main{{ if .Params.hide_details }} aria-label="{{ .Title }}"{{ end }}>
+    {{ if not .Params.hide_details }}
+    <h1>{{ .Title }}</h1>
+    {{ end }}
+    <video controls preload="metadata" playsinline aria-label="{{ .Title }}">
+      <source src="{{ .Params.video | relURL }}" type="video/mp4">
+      <p>Your browser cannot play this video. <a href="{{ .Params.video | relURL }}">Open the MP4 file</a>.</p>
+    </video>
+  </main>
+</div>
+{{ end }}

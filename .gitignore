@@ -1,0 +1,10 @@
+.tools/
+hugo_extended_*.zip
+public/
+resources/
+.hugo_build.lock
+GRAD_STUDENT_SITE_INTAKE.txt
+/Photos/
+/Portrait/
+/Videos/
+/Writings/

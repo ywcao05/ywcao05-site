@@ -1,0 +1,59 @@
+{{ define "main" }}
+<div class="page" id="main">
+  <header class="site-header">
+    <h1>Yiwen Cao</h1>
+    <a class="email" href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+  </header>
+
+  <main>
+    <section class="intro" aria-label="About Yiwen Cao">
+      <img class="portrait" src="{{ "images/portrait-warm-stone.png" | relURL }}" alt="Portrait of Yiwen Cao" width="190" height="225">
+      <div class="bio">{{ .Content }}</div>
+    </section>
+
+    <section class="section" id="writings" aria-labelledby="writings-heading">
+      <h2 id="writings-heading">Writings</h2>
+      <div class="items">
+        {{ range .Site.Data.writings }}
+        <article class="item">
+          <h3><a href="{{ .file | relURL }}" target="_blank" rel="noopener">{{ .title }} <span class="pdf-icon" aria-hidden="true">PDF</span></a></h3>
+          <p>{{ .description | markdownify }}</p>
+        </article>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="section" id="videos" aria-labelledby="videos-heading">
+      <h2 id="videos-heading">Videos</h2>
+      <p class="section-intro">These are some short mathematical videos made using the Python package <a href="https://www.manim.community/" target="_blank" rel="noopener">Manim</a> during a department summer internship.</p>
+      <div class="video-groups">
+        <div class="video-group">
+          <p>These two videos are about map projections. The first video is designed for general audience and explains the basic problem of representing the curved surface of the Earth on a flat map and introduces several common projections and their distortions. The second video is more mathematical and uses complex analysis to show that the Mercator projection is conformal.</p>
+          <div class="video-links">
+            {{ range $i, $video := first 2 .Site.Data.videos }}
+            <a class="video-button" href="{{ $video.page | relURL }}" aria-label="Play {{ $video.title }}" title="{{ $video.title }}"><span aria-hidden="true">▶</span> Video {{ add $i 1 }}</a>
+            {{ end }}
+          </div>
+        </div>
+        <div class="video-group">
+          <p>These three videos present three exercise problems and are designed to accompany an undergraduate introductory course to analysis.</p>
+          <div class="video-links">
+            {{ range $i, $video := after 2 .Site.Data.videos }}
+            <a class="video-button" href="{{ $video.page | relURL }}" aria-label="Play {{ $video.title }}" title="{{ $video.title }}"><span aria-hidden="true">▶</span> Video {{ add $i 1 }}</a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="teaching" aria-labelledby="teaching-heading">
+      <h2 id="teaching-heading">Teaching</h2>
+      {{ range .Site.Data.teaching }}
+      <article class="item">
+        <p>{{ .text | markdownify }}</p>
+      </article>
+      {{ end }}
+    </section>
+  </main>
+</div>
+{{ end }}

@@ -1,0 +1,9 @@
+- title: The Torelli Theorem for K3 Surfaces
+  description: This is my final report for the <a href="https://math.uchicago.edu/~may/REU2026/" target="_blank" rel="noopener">UChicago Mathematics REU 2026</a>. The report presents a proof of the Torelli theorem for K3 surfaces and the surjectivity of the period map.
+  file: files/The_Torelli_Theorem_for_K3_Surfaces_Yiwen_Cao.pdf
+- title: Exotic Smooth Structure on the 7-sphere
+  description: "This is my final report for MATH31800 Differential Topology at UChicago. The report explains in detail Milnor's construction of an exotic 7-sphere, prioritizing the quaternion Hopf fibration as an illustrating example."
+  file: files/Exotic_smooth_structure_on_the_7_sphere_Yiwen_Cao.pdf
+- title: Directed Study on Mapping Class Groups
+  description: "This is a poster I made for the Summer Research Fellowship 2025 at HKU. The poster presents two important results in mapping class groups of surfaces: the Birman exact sequence and finite generation."
+  file: files/Directed_Study_on_Mapping_Class_Group_Poster.pdf

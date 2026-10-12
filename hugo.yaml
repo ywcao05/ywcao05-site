@@ -1,0 +1,19 @@
+baseURL: https://ywcao05.github.io/ywcao05-site/
+title: Yiwen Cao
+languageCode: en-us
+enableRobotsTXT: true
+disableKinds: [taxonomy, term]
+
+params:
+  description: Yiwen Cao is a senior undergraduate student studying mathematics at the University of Hong Kong.
+  author: Yiwen Cao
+  email: ywcao05@connect.hku.hk
+  institution: University of Hong Kong
+  mysite:
+    credit: false
+    discovery: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
